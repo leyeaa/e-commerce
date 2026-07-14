@@ -20,8 +20,7 @@ This repository contains a Django REST backend and a React/Vite frontend for a s
 2. Activate the virtual environment from the repo root:
 
 ```powershell
-cd c:\Users\OLALEYE\Desktop\Stuff\Claude\ecommerce-project\backend
-..\.venv\Scripts\Activate.ps1
+This depend on if you're using window or linux
 ```
 
 3. Install Python dependencies:
