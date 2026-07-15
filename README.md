@@ -56,7 +56,7 @@ The API will be available at `http://127.0.0.1:8000`.
 2. Install frontend dependencies:
 
 ```powershell
-cd c:\Users\OLALEYE\Desktop\Stuff\Claude\ecommerce-project\frontend
+cd to frontend directory
 npm install
 ```
 
