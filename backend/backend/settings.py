@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
+    'drf_spectacular',
     'store',
 ]
 
@@ -147,6 +148,26 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
     ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'ENGI 9839 E-Commerce Case Study API',
+    'DESCRIPTION': (
+        'Baseline API used to compare human-authored deterministic tests '
+        'with schema-driven API fuzzing.'
+    ),
+    'VERSION': 'baseline-1.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'COMPONENT_SPLIT_REQUEST': True,
+    'OAS_VERSION': '3.0.3',
+    'PREPROCESSING_HOOKS': [
+        'store.schema.keep_experiment_endpoints',
+    ],
+    'POSTPROCESSING_HOOKS': [
+        'drf_spectacular.hooks.postprocess_schema_enums',
+        'store.schema.keep_json_request_media_type',
+    ],
 }
 
 SIMPLE_JWT = {

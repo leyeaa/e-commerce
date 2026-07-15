@@ -1,2 +1,13 @@
 .venv/
+__pycache__/
+*.py[cod]
 backend/.env
+.coverage
+backend/.coverage
+htmlcov/
+docs/project/results/coverage-html/
+docs/project/results/*.xml
+docs/project/results/*.har
+docs/project/results/*.log
+backend/schema.yml
+.schemathesis/

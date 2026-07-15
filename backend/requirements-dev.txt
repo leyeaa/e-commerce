@@ -1,0 +1,6 @@
+-r requirements.txt
+
+pytest>=8,<10
+pytest-django>=4,<5
+coverage>=7,<8
+schemathesis>=4,<5

@@ -6,6 +6,15 @@ from .serializers import RegisterSerializer, UserSerializer
 from rest_framework import status
 from .models import Product, Category, Cart, CartItem, Order, OrderItem
 from .serializers import ProductSerializer, CategorySerializer, CartSerializer, CartItemSerializer
+from .serializers import (
+    CartUpdateRequestSerializer,
+    ClientErrorResponseSerializer,
+    DetailResponseSerializer,
+    ErrorResponseSerializer,
+    OrderCreateRequestSerializer,
+    OrderCreatedResponseSerializer,
+)
+from drf_spectacular.utils import extend_schema
 
 @api_view(['GET'])
 def get_products(request):
@@ -47,6 +56,18 @@ def add_to_cart(request):
         item.save()
     return Response({'message': 'Product added to cart',"cart":CartSerializer(cart).data})
 
+@extend_schema(
+    operation_id='experiment_cart_update',
+    tags=['experiment'],
+    description='Update the quantity of an item in the authenticated user cart.',
+    request=CartUpdateRequestSerializer,
+    responses={
+        200: CartItemSerializer,
+        400: ClientErrorResponseSerializer,
+        401: DetailResponseSerializer,
+        404: ErrorResponseSerializer,
+    },
+)
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def update_cart_quantity(request):
@@ -76,6 +97,17 @@ def remove_from_cart(request):
     CartItem.objects.filter(id=item_id).delete()
     return Response({'message': 'Item removed from cart'})
 
+@extend_schema(
+    operation_id='experiment_order_create',
+    tags=['experiment'],
+    description='Create an order from the authenticated user current cart.',
+    request=OrderCreateRequestSerializer,
+    responses={
+        200: OrderCreatedResponseSerializer,
+        400: ClientErrorResponseSerializer,
+        401: DetailResponseSerializer,
+    },
+)
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def create_order(request):

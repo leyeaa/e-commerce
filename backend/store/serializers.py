@@ -52,3 +52,36 @@ class RegisterSerializer(serializers.ModelSerializer):
         password = validated_data['password']
         user = User.objects.create_user(username=username, email=email, password=password)
         return user
+
+
+class CartUpdateRequestSerializer(serializers.Serializer):
+    item_id = serializers.IntegerField(min_value=1)
+    quantity = serializers.IntegerField(min_value=1)
+
+
+class OrderCreateRequestSerializer(serializers.Serializer):
+    name = serializers.CharField(min_length=1, max_length=200)
+    address = serializers.CharField(min_length=1, max_length=500)
+    phone = serializers.RegexField(regex=r'^\d{10,15}$')
+    payment_method = serializers.ChoiceField(
+        choices=['COD', 'ONLINE'],
+        default='COD',
+    )
+
+
+class ErrorResponseSerializer(serializers.Serializer):
+    error = serializers.CharField()
+
+
+class DetailResponseSerializer(serializers.Serializer):
+    detail = serializers.CharField()
+
+
+class ClientErrorResponseSerializer(serializers.Serializer):
+    error = serializers.CharField(required=False)
+    detail = serializers.CharField(required=False)
+
+
+class OrderCreatedResponseSerializer(serializers.Serializer):
+    message = serializers.CharField()
+    order_id = serializers.IntegerField(min_value=1)
