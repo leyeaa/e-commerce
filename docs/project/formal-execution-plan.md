@@ -58,5 +58,6 @@ must not be presented as human effort.
   log.
 - Do not repeat a valid run merely to obtain a preferred outcome.
 - Count unique confirmed root causes, not individual requests or failed checks.
-- Smoke-run findings K-008 and K-009 remain known and cannot count as novel
-  formal discoveries.
+- K-009 was known from the smoke run and cannot count as a novel formal
+  discovery. K-008 is retained as a rejected classification because its smoke
+  evidence duplicated K-002.

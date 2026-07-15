@@ -1,0 +1,53 @@
+﻿{
+  "captured_at": "2026-07-15T16:22:57.569717+00:00",
+  "database": "ecommerce_course_project_fuzz",
+  "users": [
+    {
+      "carts": [
+        {
+          "id": 16,
+          "items": [
+            {
+              "id": 4620,
+              "product_id": 15,
+              "product_name": "Experiment Table",
+              "quantity": 1,
+              "unit_price": "125.50"
+            }
+          ],
+          "total": "125.50"
+        }
+      ],
+      "id": 16,
+      "orders": [],
+      "username": "experiment_other_user"
+    },
+    {
+      "carts": [
+        {
+          "id": 15,
+          "items": [
+            {
+              "id": 4622,
+              "product_id": 16,
+              "product_name": "Experiment Lamp",
+              "quantity": 3,
+              "unit_price": "25.00"
+            },
+            {
+              "id": 4623,
+              "product_id": 15,
+              "product_name": "Experiment Table",
+              "quantity": 2,
+              "unit_price": "125.50"
+            }
+          ],
+          "total": "326.00"
+        }
+      ],
+      "id": 15,
+      "orders": [],
+      "username": "experiment_user"
+    }
+  ]
+}

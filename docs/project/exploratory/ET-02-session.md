@@ -1,5 +1,9 @@
 # ET-02 session record
 
+Status: deferred at the tester's request on 2026-07-15. No E-02 environment has
+been started, no database reset has been consumed, and the 90-minute clock has
+not begun.
+
 ## Identification
 
 - Session ID: E-02
@@ -13,6 +17,18 @@
 - Mission: probe validation, authorization, state safety, and misuse handling
 - Charter: ET-02-validation-misuse.md
 - Tours: Couch Potato, Saboteur, and Antisocial
+
+## Tester-selected starting direction
+
+Olaleye requested that E-02 begin by investigating whether checkout can proceed
+when valid customer details are not supplied, especially invalid, missing,
+blank, short, non-digit, and structurally non-string phone values. This is a
+starting direction rather than a fixed script; observations during execution
+determine subsequent tests.
+
+Do not consult known-defects.md or the formal results immediately before the
+session. Candidate observations must be journaled before post-session matching
+to K identifiers.
 
 ## Time allocation
 

@@ -65,7 +65,7 @@ defect comparison.
 - coverage.py 7.15.1
 - drf-spectacular 0.30.0
 - Schemathesis 4.22.4
-- PostgreSQL version: record before the final run
+- PostgreSQL 18.1 on x86_64-windows, 64-bit
 
 Generated logs and HTML reports are ignored by Git. Preserve final submission
 artifacts separately or adjust the ignore policy when the evidence is frozen.
@@ -116,3 +116,21 @@ Formal fuzz evidence logs:
 - F-01: schemathesis-20260714-204827.log
 - F-02: schemathesis-20260714-205225.log
 - F-03: schemathesis-20260714-205539.log
+
+## Exploratory session E-01
+
+- Date: 2026-07-15
+- Tester: Olaleye
+- Duration: 90 minutes 13 seconds
+- Charter: authenticated cart-to-order business and data flow
+- Confirmed novel defects: N-001, N-002, and N-003
+- Known defects reproduced: K-006
+- Non-defect observations retained: missing line subtotals and Cart Items Console logging
+- Rejected candidate: one apparent item disappearance explained by intentional tester removal
+
+The most consequential result was N-002: after JWT expiry, unauthorized cart
+responses were rendered as a genuine empty cart while the navigation still
+showed Logout. A database snapshot proved the Table item remained persistent.
+Reauthentication alone did not refresh the cart, confirming separate N-001;
+a full frontend reload restored the item. The session then completed a valid
+COD order and verified cart cleanup and the known K-006 persistence gap.

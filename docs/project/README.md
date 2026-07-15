@@ -4,6 +4,13 @@ This directory contains the evidence and protocol for comparing human-authored
 deterministic API tests with Schemathesis API fuzzing. Exploratory testing is a
 separate required project component.
 
+Current progress and the next experimental gate are maintained in
+implementation-status.md. That file is the authoritative phase tracker.
+
+For a second tester or another machine, begin with COLLABORATOR-HANDOFF.md and
+PRE-PUSH-CHECKLIST.md. Local credentials and database state are intentionally
+not shared through Git.
+
 ## Baseline rule
 
 The application behaviour must remain unchanged until all three baseline
@@ -75,10 +82,17 @@ be triaged into unique confirmed defects rather than counted as raw failures.
 
 ## Evidence locations
 
+- implementation-status.md: authoritative implementation phase and completion status.
+- COLLABORATOR-HANDOFF.md: clean-clone setup, E-02 execution, triage, and report continuation.
+- PRE-PUSH-CHECKLIST.md: secret-safe staging and curated-evidence checks.
+- evidence-index.md: authoritative mapping from claims and runs to evidence artifacts.
+- metrics-summary.md: frozen quantitative values and explicitly pending measures.
 - baseline.md: immutable starting revision and contamination controls.
 - known-defects.md: issues known before the experiment.
 - experiment-protocol.md: research questions, metrics, and execution order.
 - exploratory/: session charters and report templates.
 - defect-log.csv: one row per unique candidate or confirmed defect.
 - literature-matrix.md: academic literature review working matrix.
+- literature-review-draft.md: critical academic synthesis and verified references.
+- report-draft.md: evidence-based report prose with E-02 placeholders.
 - results/: generated logs, summaries, and coverage artifacts.

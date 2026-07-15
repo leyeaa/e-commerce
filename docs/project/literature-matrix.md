@@ -1,27 +1,27 @@
-# Literature review working matrix
+# Literature review evidence matrix
 
-The final report must synthesize these works by method, evidence, limitations,
-and relationship to this experiment. Official tool documentation belongs in the
-implementation references but does not replace academic literature.
+Metadata was checked against paper, institutional, publisher, or bibliographic
+records on 2026-07-15. The critical prose synthesis is maintained in
+literature-review-draft.md. Official tool documentation belongs in the
+implementation references but does not replace these academic publications.
 
-| Source | Method and system | Tool or technique relevance | Measures | Result to evaluate critically | Connection to this project |
-|---|---|---|---|---|---|
-| Z. Hatfield-Dodds and D. Dygalo, Deriving Semantics-Aware Fuzzers from Web API Schemas, 2021. https://arxiv.org/abs/2112.10328 | Evaluation of eight fuzzers on sixteen open-source web services | Introduces and evaluates Schemathesis | Service compatibility, unique defects, repeated runs | Schemathesis handled more target schemas and found more unique defects than comparison tools in that study | Justifies schema-driven fuzzing and reproducible defect counts |
-| H. Sartaj, S. Ali, and J. M. Gjøby, REST API Testing in DevOps: A Study on an Evolving Healthcare IoT Application, ACM TOSEM, 2025. https://doi.org/10.1145/3765744 | Industrial study of seventeen APIs across fourteen releases | Uses Schemathesis and four other REST API testing tools | Failures, faults, coverage, regressions, cost | Tools produced duplicate and non-fault-revealing tests as well as confirmed faults | Supports deduplication, coverage, and effort metrics |
-| J. Itkonen and K. Rautiainen, Exploratory Testing: A Multiple Case Study, ISESE, 2005. https://doi.org/10.1109/ISESE.2005.1541817 | Interviews and observations across three companies | Exploratory testing in industry | Usage reasons, perceived benefits, effort and defect observations | Versatility and rapid learning were benefits; coverage management was a weakness | Supports session charters, tracking, and debrief evidence |
-| J. Itkonen, M. V. Mantyla, and C. Lassenius, Defect Detection Efficiency: Test Case Based vs. Exploratory Testing, ESEM, 2007. https://doi.org/10.1109/ESEM.2007.56 | Controlled experiment with two ninety-minute testing sessions | Test-case-based versus exploratory testing | Defects, efficiency, type, severity, false reports | No significant defect-detection difference; test-case-based work produced more false reports in that experiment | Informs separate reporting of exploratory and deterministic testing |
-| L. Inozemtseva and R. Holmes, Coverage Is Not Strongly Correlated with Test Suite Effectiveness, ICSE, 2014. https://doi.org/10.1145/2568225.2568271 | 31,000 suites over five Java systems with mutation-based effectiveness | Coverage as an adequacy metric | Statement, decision, condition coverage and effectiveness | Coverage had only low-to-moderate correlation with effectiveness after suite size was controlled | Supports treating coverage as context rather than the main outcome |
+| Source | Method and subjects | Relevance | Measures and findings | Limitation and project use |
+| --- | --- | --- | --- | --- |
+| Hatfield-Dodds and Dygalo, ICSE Companion, 2022, pp. 345-346, doi: 10.1109/ICSE-Companion55297.2022.9793781 | Thirty runs of eight fuzzers on sixteen containerized open-source web services | Introduces and evaluates Schemathesis | Service compatibility and unique defects; Schemathesis handled more than two-thirds of targets and found 1.4 to 4.5 times the unique defects of the next-best tool per target | Short companion paper and selected open-source targets limit generalization; supports seeded runs and root-cause counts |
+| Sartaj, Ali, and Gjøby, ACM TOSEM, 2025, doi: 10.1145/3765744 | Five REST API tools on 17 APIs, 120 endpoints, and 14 releases of a healthcare IoT system | Includes Schemathesis in an industrial regression study | Failures, faults, coverage, regressions, and cost; 18 potential faults, up to 84 percent coverage, 23 regressions, and more than 70 percent of tests exposing no failure | One application domain; supports separate reporting of volume, faults, coverage, regressions, and cost |
+| Itkonen and Rautiainen, ISESE, 2005, pp. 84-93, doi: 10.1109/ISESE.2005.1541817 | Interviews with seven practitioners in three companies | Empirical exploratory-testing practice | Versatility and rapid learning were perceived benefits; coverage management was a central weakness | Interview evidence does not prove causal superiority; supports charters, journals, coverage prompts, and debriefs |
+| Itkonen, Mäntylä, and Lassenius, ESEM, 2007, pp. 61-70, doi: 10.1109/ESEM.2007.56 | Controlled comparison using two 90-minute testing sessions | Test-case-based versus exploratory testing | No significant defect-detection difference reported; test-case-based work generated more false reports in that experiment | Participant and subject context limit transfer; supports equal timeboxes and false-report tracking |
+| Inozemtseva and Holmes, ICSE, 2014, pp. 435-445, doi: 10.1145/2568225.2568271 | 31,000 suites over five Java systems up to 724,000 lines, evaluated with mutation testing | Interpretation of structural coverage | Only low-to-moderate correlation after suite size was controlled; stronger coverage forms gave no greater insight | Java and mutation context differ; coverage is reported as context, not the primary effectiveness outcome |
 
-## Extraction prompts for each source
+## Extraction completeness
 
-For the required one-to-three-paragraph source summary, capture:
+| Source | Problem | Subjects | Method | Metrics | Findings | Limitations | Project connection |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Hatfield-Dodds and Dygalo | Complete | Complete | Complete | Complete | Complete | Complete | Complete |
+| Sartaj, Ali, and Gjøby | Complete | Complete | Complete | Complete | Complete | Complete | Complete |
+| Itkonen and Rautiainen | Complete | Complete | Complete | Complete | Complete | Complete | Complete |
+| Itkonen, Mäntylä, and Lassenius | Complete | Complete | Complete | Complete | Complete | Complete | Complete |
+| Inozemtseva and Holmes | Complete | Complete | Complete | Complete | Complete | Complete | Complete |
 
-1. Research problem and motivation.
-2. System or dataset studied.
-3. Experimental method and tools.
-4. Metrics and principal findings.
-5. Threats to validity and limitations.
-6. What is adopted, changed, or challenged in this project.
-
-Verify final bibliographic metadata against the publisher record and format every
-entry in IEEE style before submission.
+Before final submission, reconcile bibliography punctuation, capitalization,
+and online-access fields with the instructor's required IEEE reference style.

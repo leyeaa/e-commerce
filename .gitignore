@@ -9,5 +9,23 @@ docs/project/results/coverage-html/
 docs/project/results/*.xml
 docs/project/results/*.har
 docs/project/results/*.log
+docs/project/results/exploratory/*.log
+docs/project/results/exploratory/*-processes.json
 backend/schema.yml
 .schemathesis/
+
+# Curated, non-secret course-project evidence retained for collaboration.
+!docs/project/results/M-01-20260714-204047.log
+!docs/project/results/M-01-20260714-204047.xml
+!docs/project/results/M-01-coverage-20260714-204047.xml
+!docs/project/results/schemathesis-20260714-203403.log
+!docs/project/results/schemathesis-20260714-203915.log
+!docs/project/results/schemathesis-20260714-204316.log
+!docs/project/results/schemathesis-20260714-204827.log
+!docs/project/results/schemathesis-20260714-205225.log
+!docs/project/results/schemathesis-20260714-205539.log
+!docs/project/results/exploratory/E-01-backend.log
+!docs/project/results/exploratory/E-01-backend-error.log
+!docs/project/results/exploratory/E-01-frontend.log
+!docs/project/results/exploratory/E-01-frontend-error.log
+!docs/project/results/exploratory/E-02-*.har
