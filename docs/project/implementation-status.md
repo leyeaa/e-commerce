@@ -42,6 +42,8 @@ conversation history.
 
 ## Current gate
 
+Review package commit: 0f3ca52e9357e9b9e4042044c195e1de23225ac5 on origin/main.
+
 Both exploratory sessions and all formal baseline executions are complete.
 Application behavior remains unfixed so the evidence describes one consistent
 baseline. The current gate is peer review and submission quality control:

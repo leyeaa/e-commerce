@@ -48,7 +48,7 @@ and Schemathesis working data ignored.
 
 - [x] Commit message distinguishes test infrastructure/evidence from product
   defect fixes.
-- [ ] Push the intended branch and share its exact name and commit hash.
+- [x] Push review package to origin/main; content commit: 0f3ca52e9357e9b9e4042044c195e1de23225ac5.
 - [ ] Collaborator reviews the report claims, bibliography, and presentation.
 - [x] Final collaborator handoff identifies authoritative review files, frozen facts, and review priorities.
 - [x] Export the Word report and verify at least 12 pages and maximum 12-point
