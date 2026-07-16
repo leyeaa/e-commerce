@@ -21,7 +21,7 @@ conversation history.
 | 8. Human exploratory sessions | Complete | E-01 and E-02 completed and debriefed; combined time 180 minutes 13 seconds |
 | 9. Cross-technique triage and comparison | Complete | E-02 reproduced K-006, K-009, and N-002 but added no novel root cause |
 | 10. Academic literature review | Complete | Five-source synthesis, verified metadata, IEEE references, and presentation source summaries are complete |
-| 11. Final report assembly | Review candidate complete | Word export verified at 20 pages, 4,231 words, and maximum 12-point font; E-02 screenshots are indexed, while selected insertion, peer review, and final layout inspection remain |
+| 11. Final report assembly | Review candidate complete | Word export verified at 20 pages, 4,247 words, and maximum 12-point font; E-02 screenshots are indexed, while selected insertion, peer review, and final layout inspection remain |
 | 12. Optional defect correction and regression | Ready but optional | Baseline is frozen; any fixes must use separate commits and regression evidence |
 | 13. Presentation and literature summary | Review candidate complete | Eight-slide deck, notes, visible results/challenges, IEEE bibliography, five source discussions, and standalone literature-summary DOCX exist; peer review and timed rehearsal remain |
 

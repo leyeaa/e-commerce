@@ -82,8 +82,9 @@ oracles, not as proof of superiority.
 The system comprises a React 19 frontend, Django 5.2 and Django REST Framework
 backend, JWT authentication, and PostgreSQL persistence. The application was
 already implemented before this project and contained no dedicated verification
-or validation infrastructure. The immutable application baseline is commit
-acde2ec2a76e5f9cabbbf1b0cfaaaa46f79b00b4.
+or validation infrastructure. The application baseline was frozen before formal
+execution. No product defects were corrected until the human-authored,
+Schemathesis, and exploratory baseline activities were completed.
 
 The primary comparison targets two authenticated endpoints:
 
