@@ -21,6 +21,8 @@ result.
 - docs/project/presentation-slides.md: timed slide wording and speaking notes.
 - docs/project/presentation-literature-summary.md: required source-by-source
   presentation literature discussion.
+- docs/project/final/ENGI9839_Presentation_Literature_Summary.docx: standalone
+  literature-summary submission candidate with complete IEEE bibliography.
 - docs/project/requirements-traceability.md: course requirement mapping.
 - docs/project/implementation-status.md: authoritative completion status.
 - docs/project/evidence-index.md: claim-to-evidence map.
@@ -103,6 +105,5 @@ review comments should identify the file, section or slide, proposed change, and
 reason.
 
 After review, the remaining submission gates are screenshot insertion and Word
-layout inspection, timed presentation rehearsal, conversion of the literature
-summary to the instructor's requested format, and preservation of the final
+layout inspection, timed presentation rehearsal, submission of the exported literature summary, and preservation of the final
 commit hash.

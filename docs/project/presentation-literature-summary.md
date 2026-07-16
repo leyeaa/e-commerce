@@ -1,8 +1,8 @@
 # Literature summary for the presentation
 
-This document satisfies the course requirement for a one- to three-paragraph
-discussion of each source used to prepare the presentation. Reference numbers
-match presentation-slides.md.
+This document discusses the five academic sources used to prepare the
+presentation. Reference numbers match the slide deck and the complete IEEE
+bibliography at the end of this summary.
 
 ## [1] Hatfield-Dodds and Dygalo
 
@@ -60,5 +60,29 @@ Python API experiment.
 
 ## Complete IEEE bibliography
 
-Use the bibliography on slide 8 of presentation-slides.md without changing its
-reference numbering. Metadata and DOI fields were rechecked on 2026-07-16.
+[1] Z. Hatfield-Dodds and D. Dygalo, "Deriving semantics-aware fuzzers from
+Web API schemas," in *2022 IEEE/ACM 44th International Conference on Software
+Engineering: Companion Proceedings*, 2022, pp. 345-346,
+doi: 10.1109/ICSE-Companion55297.2022.9793781.
+
+[2] H. Sartaj, S. Ali, and J. M. Gjøby, "REST API testing in DevOps: A study
+on an evolving healthcare IoT application," *ACM Transactions on Software
+Engineering and Methodology*, vol. 35, no. 6, pp. 1-46, 2026,
+doi: 10.1145/3765744.
+
+[3] J. Itkonen and K. Rautiainen, "Exploratory testing: A multiple case study,"
+in *2005 International Symposium on Empirical Software Engineering*, 2005,
+pp. 84-93, doi: 10.1109/ISESE.2005.1541817.
+
+[4] J. Itkonen, M. V. Mäntylä, and C. Lassenius, "Defect detection efficiency:
+Test case based vs. exploratory testing," in *First International Symposium on
+Empirical Software Engineering and Measurement*, 2007, pp. 61-70,
+doi: 10.1109/ESEM.2007.56.
+
+[5] L. Inozemtseva and R. Holmes, "Coverage is not strongly correlated with
+test suite effectiveness," in *Proceedings of the 36th International Conference
+on Software Engineering*, 2014, pp. 435-445,
+doi: 10.1145/2568225.2568271.
+
+Metadata and DOI fields were rechecked on 2026-07-16. Reference numbering
+matches the presentation slide deck.

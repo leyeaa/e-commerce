@@ -131,6 +131,8 @@ status and state claims; a HAR is not required for those claims.
 | final/ENGI9839_Course_Project_Final_Report.docx | Word-generated report: 20 pages, 4,231 words, maximum rendered font 12 point; screenshot placeholders pending |
 | export-presentation-to-pptx.ps1 | Reproducible PowerPoint generator with embedded speaker notes and preview export |
 | final/ENGI9839_Course_Project_Presentation.pptx | Eight-slide widescreen presentation with citations, IEEE bibliography, and notes on slides 1-7 |
+| export-presentation-literature-summary-to-docx.ps1 | Reproducible exporter for the required source discussions and bibliography |
+| final/ENGI9839_Presentation_Literature_Summary.docx | Five-source presentation literature discussion with complete IEEE bibliography |
 
 ## Preservation warning
 

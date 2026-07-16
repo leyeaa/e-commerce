@@ -102,6 +102,7 @@ be triaged into unique confirmed defects rather than counted as raw failures.
 - export-report-to-docx.ps1: reproducible Microsoft Word exporter for the Markdown report.
 - final/ENGI9839_Course_Project_Final_Report.docx: generated 20-page, maximum-12-point report review candidate; selected screenshot insertion remains.
 - final/ENGI9839_Course_Project_Presentation.pptx: verified eight-slide presentation review candidate with speaker notes.
+- final/ENGI9839_Presentation_Literature_Summary.docx: required five-source literature discussion and complete IEEE bibliography.
 - results/: generated logs, summaries, and coverage artifacts.
 
 ## Export the Word report

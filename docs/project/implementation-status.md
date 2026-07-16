@@ -23,7 +23,7 @@ conversation history.
 | 10. Academic literature review | Complete | Five-source synthesis, verified metadata, IEEE references, and presentation source summaries are complete |
 | 11. Final report assembly | Review candidate complete | Word export verified at 20 pages, 4,231 words, and maximum 12-point font; E-02 screenshots are indexed, while selected insertion, peer review, and final layout inspection remain |
 | 12. Optional defect correction and regression | Ready but optional | Baseline is frozen; any fixes must use separate commits and regression evidence |
-| 13. Presentation and literature summary | Review candidate complete | Eight-slide deck, speaker notes, visible results/challenges, IEEE bibliography, and per-source summary exist; peer review and timed rehearsal remain |
+| 13. Presentation and literature summary | Review candidate complete | Eight-slide deck, notes, visible results/challenges, IEEE bibliography, five source discussions, and standalone literature-summary DOCX exist; peer review and timed rehearsal remain |
 
 ## Completed formal baseline
 
@@ -42,7 +42,7 @@ conversation history.
 
 ## Current gate
 
-Review package commit: 0f3ca52e9357e9b9e4042044c195e1de23225ac5 on origin/main.
+Initial review package commit: 0f3ca52e9357e9b9e4042044c195e1de23225ac5 on origin/main.
 
 Both exploratory sessions and all formal baseline executions are complete.
 Application behavior remains unfixed so the evidence describes one consistent

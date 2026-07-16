@@ -59,7 +59,9 @@ and Schemathesis working data ignored.
   citations plus the IEEE bibliography slide: eight-slide PPTX verified.
 - [ ] Rehearse slides 1–7 within approximately 6 minutes and prepare for 2
   minutes of questions.
-- [ ] Submit presentation-literature-summary.md in the instructor's requested
-  document format.
+- [x] Export the five-source presentation literature summary and complete IEEE
+  bibliography to a standalone Word document.
+- [ ] Submit final/ENGI9839_Presentation_Literature_Summary.docx with the
+  presentation materials.
 - [x] Keep all product fixes out of the baseline commit; label later regression
   work separately.

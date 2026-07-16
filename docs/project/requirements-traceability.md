@@ -22,7 +22,7 @@ commitments from ENGI9839_Project_Proposal_Final_Submission.pdf on 2026-07-16.
 | IEEE citations for all sources | report bibliography and literature files | Metadata verified; visually check final export |
 | Approximately 6-minute presentation plus 2-minute Q&A | presentation-slides.md and final/ENGI9839_Course_Project_Presentation.pptx | Eight-slide PPTX verified; timed rehearsal remains |
 | Submit slide copy with citations and IEEE bibliography | final/ENGI9839_Course_Project_Presentation.pptx, slide 8 | Export complete; final human review and submission remain |
-| One-to-three-paragraph summary of each presentation source | presentation-literature-summary.md | Complete |
+| One-to-three-paragraph summary of each presentation source plus complete IEEE bibliography | presentation-literature-summary.md and final/ENGI9839_Presentation_Literature_Summary.docx | Complete; standalone DOCX exported |
 
 ## Non-negotiable final checks
 
