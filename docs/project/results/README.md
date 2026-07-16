@@ -67,8 +67,9 @@ defect comparison.
 - Schemathesis 4.22.4
 - PostgreSQL 18.1 on x86_64-windows, 64-bit
 
-Generated logs and HTML reports are ignored by Git. Preserve final submission
-artifacts separately or adjust the ignore policy when the evidence is frozen.
+Most generated logs and HTML reports are ignored by Git. Selected formal and
+exploratory evidence is explicitly retained; preserve the complete final
+submission package separately as well.
 
 ## Formal human-authored run M-01
 
@@ -134,3 +135,27 @@ showed Logout. A database snapshot proved the Table item remained persistent.
 Reauthentication alone did not refresh the cart, confirming separate N-001;
 a full frontend reload restored the item. The session then completed a valid
 COD order and verified cart cleanup and the known K-006 persistence gap.
+
+## Exploratory session E-02
+
+- Date: 2026-07-16
+- Tester: Olaleye
+- Duration: 90 minutes
+- Charter: checkout validation, authentication, state safety, and misuse
+- Confirmed novel defects: none
+- Known defects reproduced: K-006 and K-009
+- Existing novel defect reproduced or extended: N-002
+- Non-defect observations retained: short numeric address accepted without a
+  stated address-format oracle
+
+E-02 rejected a six-digit phone and a phone containing an at sign, but accepted
+a 17-digit phone and whitespace-only name and address values. The latter three
+symptoms were deduplicated to K-009. A punctuation-rich address initially
+coincided with an expired JWT and generic Order failed UI; reauthentication and
+an identical retry succeeded, reproducing N-002 while demonstrating that the
+punctuation was not the cause. Snapshots showed state preservation after 400 and
+401 responses. All five successful E-02 orders also reproduced K-006 because
+checkout details were not persisted.
+
+Across E-01 and E-02, exploratory testing took 180 minutes 13 seconds, found
+three unique novel defects, and reproduced two unique known defects.

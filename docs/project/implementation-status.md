@@ -1,6 +1,6 @@
 # Implementation plan and status
 
-Last updated: 2026-07-15
+Last updated: 2026-07-16
 
 This file is the authoritative project status. Detailed protocols, raw evidence,
 and report material remain in their linked files. Status changes must be made
@@ -18,11 +18,12 @@ conversation history.
 | 5. Human-authored deterministic testing | Complete | Formal M-01: 20 cases, 9 pass, 10 expected failures, 1 unexpected pass |
 | 6. Schema-driven API fuzzing | Complete | F-01 through F-03: 3,252 generated cases across three seeds |
 | 7. Exploratory-testing preparation | Complete | Reproducible environment, operator guide, charters, session records, and passed READINESS rehearsal |
-| 8. Human exploratory sessions | E-01 complete; E-02 assigned for later collaboration | E-01 completed and debriefed with three confirmed novel defects. A portable collaborator handoff prepares a second tester to conduct E-02 on an independently seeded local database |
-| 9. Cross-technique triage and comparison | E-01 incorporated; blocked by E-02 | E-01 candidates are deduplicated and reflected in the comparison; final totals wait for E-02 |
-| 10. Academic literature review | Draft complete | Five-source critical synthesis and metadata matrix complete; final IEEE formatting remains |
-| 11. Final report assembly | Draft complete through E-01 | Evidence-based report prose, metrics, evidence index, comparison table, and literature draft exist; E-02-dependent sections remain open |
-| 12. Optional defect correction and regression | Deferred | May begin only after E-01 and E-02 baseline sessions finish |
+| 8. Human exploratory sessions | Complete | E-01 and E-02 completed and debriefed; combined time 180 minutes 13 seconds |
+| 9. Cross-technique triage and comparison | Complete | E-02 reproduced K-006, K-009, and N-002 but added no novel root cause |
+| 10. Academic literature review | Complete | Five-source synthesis, verified metadata, IEEE references, and presentation source summaries are complete |
+| 11. Final report assembly | Review candidate complete | Word export verified at 20 pages, 4,231 words, and maximum 12-point font; E-02 screenshots are indexed, while selected insertion, peer review, and final layout inspection remain |
+| 12. Optional defect correction and regression | Ready but optional | Baseline is frozen; any fixes must use separate commits and regression evidence |
+| 13. Presentation and literature summary | Review candidate complete | Eight-slide deck, speaker notes, visible results/challenges, IEEE bibliography, and per-source summary exist; peer review and timed rehearsal remain |
 
 ## Completed formal baseline
 
@@ -41,32 +42,25 @@ conversation history.
 
 ## Current gate
 
-E-01 is complete. E-02 is intentionally deferred until the user has another
-uninterrupted 90-minute window. Independent evidence consolidation, analysis,
-literature, and report drafting may continue without modifying application
-behaviour. Final cross-technique conclusions remain provisional until E-02 is
-executed and debriefed.
-
-The colleague may use a separate clone, machine, and PostgreSQL instance. The
-deterministic seed, setup checker, READINESS rehearsal, E-02 handoff, evidence
-requirements, and post-session report updates are documented in
-COLLABORATOR-HANDOFF.md. This environment variation must be recorded as a threat
-to validity, not treated as a requirement to share Olaleye's database.
+Both exploratory sessions and all formal baseline executions are complete.
+Application behavior remains unfixed so the evidence describes one consistent
+baseline. The current gate is peer review and submission quality control:
+review the report and slide deck, insert selected screenshots, inspect the final
+Word layout, rehearse the presentation, and preserve the final submission
+package.
 
 ## Remaining deliverables
 
-1. Completed E-01 and E-02 session records and evidence indexes.
-2. Reproduced and deduplicated exploratory findings in defect-log.csv.
-3. Manual-versus-Schemathesis comparison, with exploratory results reported
-   separately as required by the course.
-4. Critical literature synthesis with verified IEEE references.
-5. Threats to validity, lessons learned, conclusions, and presentation assets.
-6. Optional post-baseline fixes and regression evidence, clearly separated
-   from the baseline comparison.
+1. Obtain collaborator review of the report, citations, and presentation.
+2. Insert selected indexed screenshots at the marked Word placeholders and
+   perform final visual review; retain the unavailable-effort disclosure.
+3. Rehearse the presentation and submit the literature summary in the requested
+   format.
+4. Preserve the review commit and later submission package; keep any optional
+   post-baseline fixes separate from the baseline comparison.
 
 ## Change-control rule
 
-Do not modify endpoint validation, authorization, persistence, or transaction
-behaviour until E-01 and E-02 are complete. Test infrastructure and report
-documentation may continue to change if those changes do not alter application
-behaviour under test.
+The comparison baseline is complete and immutable. Any endpoint validation,
+authorization, persistence, or transaction fix must now be isolated in a
+post-baseline commit and must not replace the recorded results.

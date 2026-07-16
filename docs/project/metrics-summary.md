@@ -47,16 +47,37 @@ before completion.
 | Rejected or resolved candidates | 1 |
 
 The three confirmed novel defects are N-001, N-002, and N-003. K-006 was
-independently reproduced. E-02 remains pending, so final exploratory totals and
-cross-technique conclusions are not yet frozen.
+independently reproduced.
 
-## Effort data still required
+## Exploratory E-02 and combined totals
 
-- Human time spent designing the deterministic M-01 suite.
-- Human time spent configuring and triaging Schemathesis.
-- Time spent confirming and deduplicating K and N defects.
-- E-02 design, execution, investigation, and reporting allocation.
+| Measure | E-02 | E-01 and E-02 combined |
+| --- | ---: | ---: |
+| Timebox | 90 minutes | 180 minutes 13 seconds |
+| Tester-estimated design and execution | 30 minutes | 60 minutes |
+| Tester-estimated investigation and reporting | 60 minutes | 120 minutes |
+| Confirmed novel defects | 0 | 3 |
+| Unique known defects reproduced | 2, K-006 and K-009 | 2, K-006 and K-009 |
+| Existing novel defects reproduced or extended | 1, N-002 | 1, N-002 |
+| Non-defect observations retained | 1 | 3 |
 
-These must be reported honestly from available work records or described as
-unavailable estimates. Tool wall-clock duration must not be substituted for
-human effort.
+E-02 produced five candidate observations. Three validation symptoms were
+deduplicated to K-009, the expired-authentication symptom reproduced and
+extended N-002, and the short numeric address was retained as a non-defect
+observation because no address-format oracle was established. Five successful
+orders also reproduced K-006. Expected controls rejected a short phone and a
+phone containing an at sign, while a punctuation-rich address succeeded after
+reauthentication.
+
+## Human-effort limitation
+
+- Human time spent designing the deterministic M-01 suite was not recorded
+  prospectively and is unavailable as a defensible measurement.
+- Human time spent configuring and triaging Schemathesis was not recorded
+  prospectively and is unavailable as a defensible measurement.
+- Confirmation and deduplication occurred across implementation and reporting
+  work and cannot be separated reliably after the fact.
+
+These are reported as unavailable rather than reconstructed from conversation
+length or tool wall-clock duration. The missing formal human-effort measures are
+a threat to construct validity and prevent a quantitative effort comparison.

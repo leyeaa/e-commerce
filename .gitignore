@@ -29,3 +29,11 @@ backend/schema.yml
 !docs/project/results/exploratory/E-01-frontend.log
 !docs/project/results/exploratory/E-01-frontend-error.log
 !docs/project/results/exploratory/E-02-*.har
+!docs/project/results/exploratory/E-02-backend.log
+!docs/project/results/exploratory/E-02-backend-error.log
+!docs/project/results/exploratory/E-02-frontend.log
+!docs/project/results/exploratory/E-02-frontend-error.log
+
+docs/project/private/
+docs/project/final/presentation-preview/
+docs/project/final/*_updated.docx

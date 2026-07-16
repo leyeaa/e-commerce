@@ -43,6 +43,7 @@
 - Schemathesis runner and state-reset hook.
 - Exploratory environment and session records.
 - Distinction between instrumentation and product fixes.
+- Implementation challenges, mitigations, residual limitations, and lessons.
 
 ## 6. Results
 

@@ -83,7 +83,8 @@ doi: 10.1109/ICSE-Companion55297.2022.9793781.
 
 [2] H. Sartaj, S. Ali, and J. M. Gjøby, 'REST API testing in DevOps: A
 study on an evolving healthcare IoT application,' ACM Transactions on Software
-Engineering and Methodology, 2025, doi: 10.1145/3765744.
+Engineering and Methodology, vol. 35, no. 6, pp. 1-46, 2026,
+doi: 10.1145/3765744.
 
 [3] J. Itkonen and K. Rautiainen, 'Exploratory testing: A multiple case
 study,' in 2005 International Symposium on Empirical Software Engineering,
@@ -99,5 +100,7 @@ with test suite effectiveness,' in Proceedings of the 36th International
 Conference on Software Engineering, 2014, pp. 435-445,
 doi: 10.1145/2568225.2568271.
 
-Final formatting must be checked against the instructor's required IEEE variant
-and the accessible publisher records when the report bibliography is assembled.
+Metadata and DOI fields were rechecked against Crossref records on 2026-07-16.
+The 2005 IEEE record has inconsistent deposited page metadata across indexes;
+the 84-93 proceedings range already used by the project is retained. Final PDF
+export still requires a visual IEEE-style punctuation and typography check.

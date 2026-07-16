@@ -1,0 +1,7 @@
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, store
+Running migrations:
+  No migrations to apply.
+Experiment data ready for experiment_user and experiment_other_user.
+Fuzz server: http://127.0.0.1:8000
+Schema:      http://127.0.0.1:8000/api/schema/

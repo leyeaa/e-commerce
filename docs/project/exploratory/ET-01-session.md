@@ -70,7 +70,9 @@
 
 ## Evidence index
 
-- Screenshots: none supplied; tester observations recorded contemporaneously.
+- Screenshots: tester confirms screenshots were taken; filenames and repository
+  copies are pending final report assembly. Prioritize the empty-cart/Logout and
+  Console empty-src-warning images.
 - HTTP requests and responses: E-01-backend-error.log, including login 200, cart 401/200, quantity 200, remove 200, and order-create 200.
 - Database snapshots: E-01-before-20260715-124843.json; E-01-after-lamp-quantity-20260715-132310.json; E-01-two-product-cart-20260715-135254.json; E-01-after-first-zero-boundary-20260715-140117.json; E-01-empty-cart-20260715-140814.json; E-01-after-20260715-142907.json.
 - Server or browser logs: E-01-backend.log, E-01-backend-error.log, E-01-frontend.log, and E-01-frontend-error.log.

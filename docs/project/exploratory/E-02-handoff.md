@@ -1,19 +1,19 @@
 # E-02 resumption handoff
 
+> Superseded on 2026-07-16: E-02 was completed and debriefed by Olaleye. Do not
+> follow this historical resumption guide or rerun the session as a replacement
+> baseline result. See ET-02-session.md for the authoritative record.
+
 ## Status
 
-- Deferred by Olaleye on 2026-07-15.
-- Environment not started.
-- Database not reset for E-02.
-- Start and end times remain blank.
-- No E-02 result or candidate exists.
+- Completed by Olaleye on 2026-07-16.
+- Timebox: 10:05:33 to 11:35:33 -02:30.
+- Candidate triage and evidence indexing are complete in ET-02-session.md.
 
 ## Human gate
 
-Reserve one uninterrupted 90-minute window. Reply with Start E-02. Codex will
-launch the isolated environment, verify the before snapshot, and wait until the
-tester confirms the browser and Network panel are ready before starting the
-clock.
+Retired. The completed session record and evidence are authoritative; any later
+execution is regression or replication work and must not replace E-02.
 
 ## Tester-selected initial direction
 
