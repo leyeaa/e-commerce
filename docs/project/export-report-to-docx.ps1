@@ -165,6 +165,12 @@ try {
     $tocRange.Text = ''
     $toc = $document.TablesOfContents.Add($tocRange, $true, 1, 2)
     $toc.Update()
+    foreach ($table in $document.Tables) {
+        $table.AutoFitBehavior(2)
+        if ($table.Rows.Count -gt 0) {
+            $table.Rows.Item(1).HeadingFormat = -1
+        }
+    }
     foreach ($section in $document.Sections) {
         $footer = $section.Footers.Item(1)
         $footer.Range.ParagraphFormat.Alignment = 2

@@ -13,7 +13,7 @@ result.
 ## Authoritative review files
 
 - docs/project/final/ENGI9839_Course_Project_Final_Report.docx: generated
-  20-page report review candidate.
+  22-page report review candidate with the full consolidated defect table.
 - docs/project/report-draft.md: authoritative report content used by the Word
   exporter.
 - docs/project/final/ENGI9839_Course_Project_Presentation.pptx: verified

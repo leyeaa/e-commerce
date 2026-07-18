@@ -28,6 +28,9 @@ Useful checks:
 - [x] Requirements traceability, presentation draft, and presentation-source
   summaries.
 - [x] Implementation challenge register and report challenge section.
+- [x] Root README provides clean setup, application startup, manual and
+  Schemathesis commands, expected sample results, findings, troubleshooting,
+  and the recommended submission-file scope.
 
 ## Curated evidence that should appear as staged files
 
@@ -52,7 +55,7 @@ and Schemathesis working data ignored.
 - [ ] Collaborator reviews the report claims, bibliography, and presentation.
 - [x] Final collaborator handoff identifies authoritative review files, frozen facts, and review priorities.
 - [x] Export the Word report and verify at least 12 pages and maximum 12-point
-  font: 20 pages and maximum 12 point verified.
+  font: 22 pages and maximum 12 point verified.
 - [ ] Insert selected exploratory screenshots at the marked figure placeholders
   and perform the final visual layout review.
 - [x] Convert presentation-slides.md to the submitted slide format and retain

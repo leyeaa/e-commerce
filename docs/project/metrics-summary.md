@@ -21,6 +21,10 @@ not unique defects.
 | Full runner duration | 8.769 seconds | Not separately recorded |
 | Store-package line and branch coverage | 64.5 percent | Not instrumented comparably |
 
+The 64.5 percent value is the formal M-01 baseline measurement. The
+post-baseline `snapshot_experiment.py` exploratory evidence utility is excluded
+from this coverage boundary.
+
 ## Per-run Schemathesis data
 
 | Run | Seed | Cases | Failing cases | Raw failed checks | Duration |

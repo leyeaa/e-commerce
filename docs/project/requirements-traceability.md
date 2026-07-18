@@ -9,7 +9,7 @@ commitments from ENGI9839_Project_Proposal_Final_Submission.pdf on 2026-07-16.
 | Existing system or case study permitted | Baseline application and report Section 3 | Complete |
 | Practical implementation component | pytest suite, Schemathesis configuration, OpenAPI instrumentation, scripts, exploratory tooling | Complete |
 | Source code and relevant artifacts | backend tests/scripts/settings plus docs/project evidence | Complete; stage and push intentionally |
-| Clear run instructions | docs/project/README.md and collaborator setup checker | Complete |
+| Clear run instructions | root README.md (primary clean-setup and execution guide), docs/project/README.md, and collaborator setup checker | Complete; includes application startup, both formal test techniques, expected output, troubleshooting, and submission packaging |
 | Sample output or results | docs/project/results/README.md, logs, XML, snapshots, report Section 6 | Complete |
 | Brief implementation explanation and findings | Report Sections 5–7 | Complete |
 | Instructor-requested implementation challenges | implementation-challenges.md and Report Section 5.1 | Complete; retain difficulties and residual limitations rather than presenting an unrealistically smooth process |
@@ -18,7 +18,7 @@ commitments from ENGI9839_Project_Proposal_Final_Submission.pdf on 2026-07-16.
 | Dedicated isolated databases | backend.settings_test, backend.settings_fuzz, safety scripts | Complete |
 | Compare defects, coverage, effort, and fault type | protocol, metrics, comparison table, report Sections 6–7 | Complete except unavailable retrospective formal human-effort values must remain disclosed |
 | Additional exploratory testing | E-01 and E-02 charters, journals, debriefs, logs, snapshots, and indexed E-02 screenshots | Complete |
-| Report at least 12 pages, maximum 12-point font | report-draft.md and final/ENGI9839_Course_Project_Final_Report.docx | Word export verified at 20 pages and maximum rendered font of 12 point; insert selected screenshots at marked placeholders and perform final visual review |
+| Report at least 12 pages, maximum 12-point font | report-draft.md and final/ENGI9839_Course_Project_Final_Report.docx | Word export verified at 22 pages and maximum rendered font of 12 point; the full consolidated defect table is included; insert selected screenshots at marked placeholders and perform final visual review |
 | IEEE citations for all sources | report bibliography and literature files | Metadata verified; visually check final export |
 | Approximately 6-minute presentation plus 2-minute Q&A | presentation-slides.md and final/ENGI9839_Course_Project_Presentation.pptx | Eight-slide PPTX verified; timed rehearsal remains |
 | Submit slide copy with citations and IEEE bibliography | final/ENGI9839_Course_Project_Presentation.pptx, slide 8 | Export complete; final human review and submission remain |

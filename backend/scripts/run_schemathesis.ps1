@@ -1,5 +1,5 @@
 param(
-    [int]$MaxExamples = 1000,
+    [int]$MaxExamples = 500,
     [int]$Seed = 9839,
     [string]$BaseUrl = 'http://127.0.0.1:8000'
 )

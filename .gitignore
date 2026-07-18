@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 backend/.env
+frontend/.env
 .coverage
 backend/.coverage
 htmlcov/
@@ -37,3 +38,6 @@ backend/schema.yml
 docs/project/private/
 docs/project/final/presentation-preview/
 docs/project/final/*_updated.docx
+
+# Microsoft Office lock files created while documents are open.
+~$*

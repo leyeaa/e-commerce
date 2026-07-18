@@ -128,7 +128,7 @@ status and state claims; a HAR is not required for those claims.
 | presentation-literature-summary.md | Required one-paragraph discussion of every presentation source |
 | report-draft.md | Complete evidence-based report content for final formatting |
 | export-report-to-docx.ps1 | Reproducible Markdown-to-Word conversion and formatting script |
-| final/ENGI9839_Course_Project_Final_Report.docx | Word-generated report: 20 pages, 4,247 words, maximum rendered font 12 point; screenshot placeholders pending |
+| final/ENGI9839_Course_Project_Final_Report.docx | Word-generated report: 22 pages, 4,827 words, maximum rendered font 12 point; full consolidated defect table included and screenshot placeholders pending |
 | export-presentation-to-pptx.ps1 | Reproducible PowerPoint generator with embedded speaker notes and preview export |
 | final/ENGI9839_Course_Project_Presentation.pptx | Eight-slide widescreen presentation with citations, IEEE bibliography, and notes on slides 1-7 |
 | export-presentation-literature-summary-to-docx.ps1 | Reproducible exporter for the required source discussions and bibliography |

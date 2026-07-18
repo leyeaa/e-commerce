@@ -4,6 +4,7 @@ source = store
 omit =
     store/migrations/*
     store/tests.py
+    store/management/commands/snapshot_experiment.py
 
 [report]
 show_missing = True

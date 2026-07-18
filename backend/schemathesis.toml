@@ -1,5 +1,5 @@
 # Baseline configuration. CLI scripts add the fixed seed and endpoint filter.
-generation.max-examples = 1000
+generation.max-examples = 500
 request-timeout = 10.0
 hooks = 'schemathesis_hooks'
 

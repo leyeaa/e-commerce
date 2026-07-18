@@ -16,8 +16,8 @@ existing React and Django e-commerce application. A frozen suite executed 20
 human-designed cases and reproduced eight known root causes; three seeded
 Schemathesis runs generated 3,252 cases and repeatedly reproduced three known
 input-contract defects. Neither formal technique found a novel root cause.
-Store-package combined line and branch coverage for the human suite was 64.5
-percent, while comparable fuzz coverage was unavailable. Two required
+Store-package combined line and branch coverage for the formal M-01 baseline
+was 64.5 percent, while comparable fuzz coverage was unavailable. Two required
 90-minute exploratory sessions separately found three novel frontend and
 authentication-lifecycle defects and reproduced two known defects. The small
 manual suite could check ownership, persistence, and transaction behavior
@@ -191,6 +191,10 @@ state as JSON for exploratory evidence.
 
 The manual runner erases prior coverage data, executes the frozen suite, writes
 JUnit and coverage XML, produces HTML coverage, and records wall-clock time.
+The coverage boundary excludes migrations, the legacy test module, and the
+post-baseline exploratory snapshot command. The snapshot command was introduced
+after M-01 to collect evidence and is not application functionality exercised
+by the manual suite.
 The Schemathesis runner obtains a fresh JWT, limits execution to the selected
 paths, records the seed and budget, and saves the complete console log.
 
@@ -257,15 +261,41 @@ effectiveness.
 | Unique novel defects | 0 | 0 | 3 |
 | False or rejected classifications | 1 | 0 after hardening | 1 resolved candidate and 1 non-defect observation |
 | Execution or session duration | 2.88 s pytest; 8.769 s runner | 552.58 s | 180 min 13 s |
-| Comparable code coverage | 64.5 percent | Not collected | Not collected |
+| Comparable code coverage | 64.5 percent (formal M-01 scope) | Not collected | Not collected |
 
-### 6.1 Human-authored run M-01
+### 6.1 Consolidated defect table
+
+The table below makes the report self-contained by listing every coded finding
+in the final register. A known defect is one documented before formal
+experimental execution; a novel defect is one first confirmed through valid
+exploratory testing. K-008 is retained only to show the audit trail: it was
+rejected as a duplicate of K-002 and is not included in any defect count.
+
+| ID | Classification | Area | Consolidated finding | Severity | Reproduced or confirmed by | Final disposition |
+| --- | --- | --- | --- | --- | --- | --- |
+| K-001 | Known | Cart update | An authenticated user can update another user's cart item because the item lookup does not enforce ownership. | High | Human-authored M-01 | Confirmed known defect; reproduced. |
+| K-002 | Known | Cart update | A malformed, non-integer quantity is converted without safe validation and can cause HTTP 500 instead of a client error. | Medium | Human-authored M-01; Schemathesis F-01 to F-03 | Confirmed known defect; reproduced by both formal techniques. |
+| K-003 | Known | Cart update | A quantity below one deletes the cart item even though the request is rejected, so an invalid request changes persistent state. | High | Human-authored M-01 | Confirmed known defect; reproduced. |
+| K-004 | Known | Order creation | An omitted phone value reaches string-specific validation and causes HTTP 500 instead of a client error. | Medium | Human-authored M-01; Schemathesis F-01 to F-03 | Confirmed known defect; reproduced by both formal techniques. |
+| K-005 | Known | Order creation | A non-string phone value causes HTTP 500 because its type is not checked before string-specific validation. | Medium | Human-authored M-01 | Confirmed known defect; reproduced. |
+| K-006 | Known | Order creation | Checkout accepts name, address, phone, and payment method, but those details are not persisted with the order. | High | Human-authored M-01; exploratory E-01 and E-02 | Confirmed known defect; reproduced in formal and exploratory testing. |
+| K-007 | Known | Order creation | Order and line-item writes are not atomic; an item-write failure can leave a partial order in the database. | High | Human-authored M-01 with an injected item-write failure | Confirmed known defect; reproduced. |
+| K-008 | Rejected classification | Cart update | The proposed malformed-item-identifier failure was not distinct: the original smoke request actually contained a malformed quantity already covered by K-002. | Not applicable | M-01 investigation and smoke-evidence review | Rejected as a duplicate of K-002; not counted as a defect. |
+| K-009 | Known | Order creation | Required checkout values and allowed payment choices are not consistently validated; examples included an omitted name, a 17-digit phone, and whitespace-only name or address. | High | Human-authored M-01; Schemathesis F-01 to F-03; exploratory E-02 | Confirmed known defect; reproduced by all three approaches. |
+| N-001 | Novel | Frontend cart/authentication | Successful login stores the tokens and navigates home but does not refetch the user's persistent cart, leaving its items and badge hidden until a full reload. | Medium | Exploratory E-01 | Confirmed novel defect. |
+| N-002 | Novel | Frontend authentication lifecycle | Expired authentication is shown as an empty cart or generic Order failed state instead of telling the user to log in again, even while persisted cart data remains. | Medium | Exploratory E-01; reproduced and extended in E-02 | Confirmed novel defect. |
+| N-003 | Novel | Frontend product display | Products without images are rendered with an empty image source, producing repeated React warnings and possible unnecessary page requests. | Low | Exploratory E-01 | Confirmed novel defect. |
+
+### 6.2 Human-authored run M-01
 
 M-01 collected 20 cases. Nine controls passed, ten strict known-defect tests
 failed as expected, and one strict expected failure unexpectedly passed. There
 were no ordinary unexpected failures. Store-package combined line and branch
-coverage was 64.5 percent. pytest execution took 2.88 seconds and the complete
-runner, including reports, took 8.769 seconds.
+coverage was 64.5 percent for the formal M-01 baseline. The post-baseline
+exploratory snapshot command is excluded from this boundary because it is an
+evidence utility rather than application functionality evaluated by the suite.
+pytest execution took 2.88 seconds and the complete runner, including reports,
+took 8.769 seconds.
 
 The unexpected pass prompted an important correction. K-008 had claimed that a
 malformed item identifier produced a server error, but the selected object value
@@ -278,7 +308,7 @@ K-009. These included cross-user modification, mutation on rejected input,
 unhandled types, missing checkout persistence, and non-atomic order creation.
 No novel defect was confirmed by the formal manual run.
 
-### 6.2 Formal Schemathesis runs
+### 6.3 Formal Schemathesis runs
 
 F-01, F-02, and F-03 each generated 1,084 cases. Across 3,252 cases, nine cases
 failed fifteen raw checks in 552.58 seconds. All three seeds reduced to the same
@@ -293,7 +323,7 @@ hook. Earlier smoke checks exposed provisional 401 and parse-error schema
 inaccuracies. Those instrumentation artifacts were corrected before formal
 execution and are not counted as application failures.
 
-### 6.3 Exploratory E-01
+### 6.4 Exploratory E-01
 
 Olaleye completed E-01 in 90 minutes 13 seconds and estimated 30 minutes for
 test design and execution and 60 minutes for investigation and reporting. The
@@ -328,7 +358,7 @@ fields. Missing cart-line subtotals and Console logging of Cart Items were
 retained as usability and code-quality observations rather than inflated into
 defect counts.
 
-### 6.4 Exploratory E-02
+### 6.5 Exploratory E-02
 
 Olaleye completed E-02 in exactly 90 minutes and estimated 30 minutes for test
 design and execution and 60 minutes for investigation and evidence reporting.
